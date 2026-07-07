@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechNova - Modern Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#2563eb;
+    --secondary:#1e40af;
+    --light:#f8fafc;
+    --dark:#0f172a;
+    --white:#ffffff;
+}
+
+body{
+    background:var(--light);
+    color:#333;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--primary);
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:var(--primary);
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* COMMON */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    color:var(--secondary);
+    margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/* STATS */
+.stats{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    font-size:3rem;
+}
+
+/* ABOUT */
+.about{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+}
+
+.about-text{
+    flex:1;
+}
+
+/* PRICING */
+.price{
+    font-size:2rem;
+    color:var(--secondary);
+    margin:15px 0;
+}
+
+/* TEAM */
+.team-img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+/* CONTACT */
+.contact{
+    background:white;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer a{
+    color:#93c5fd;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .nav-container{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="nav-container">
+<div class="logo">TechNova</div>
+
+<ul class="nav-links">
+<li><a href="#features">Features</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Innovate Your Future With TechNova</h1>
+<p>Powerful digital solutions that help businesses grow smarter, faster, and more efficiently.</p>
+<a href="#features" class="btn">Get Started</a>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<div class="container">
+<div class="grid">
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat-box">
+<h2>120+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h2>99%</h2>
+<p>Success Rate</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+<div class="container">
+<h2 class="section-title">Our Features</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>⚡ Fast Performance</h3>
+<p>Optimized solutions for speed, efficiency and reliability.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Secure Platform</h3>
+<p>Advanced security and data protection for your business.</p>
+</div>
+
+<div class="card">
+<h3>☁ Cloud Integration</h3>
+<p>Connect seamlessly with cloud-based services.</p>
+</div>
+
+<div class="card">
+<h3>📊 Smart Analytics</h3>
+<p>Gain insights with real-time business intelligence.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+alt="Technology">
+
+<div class="about-text">
+<h3>Who We Are</h3>
+<p>
+TechNova is a leading technology company dedicated to helping businesses
+achieve digital transformation. We provide innovative software solutions,
+cloud services, analytics, and consulting that empower organizations
+to grow and stay ahead in the competitive market.
+</p>
+<br>
+<p>
+Our mission is to deliver reliable, scalable, and intelligent technology
+solutions that create real business value.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+<div class="container">
+<h2 class="section-title">Pricing Plans</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Starter</h3>
+<div class="price">₹499/mo</div>
+<p>1 User</p>
+<p>Email Support</p>
+<p>Basic Analytics</p>
+</div>
+
+<div class="card">
+<h3>Professional</h3>
+<div class="price">₹999/mo</div>
+<p>10 Users</p>
+<p>Priority Support</p>
+<p>Advanced Analytics</p>
+</div>
+
+<div class="card">
+<h3>Enterprise</h3>
+<div class="price">₹1999/mo</div>
+<p>Unlimited Users</p>
+<p>24/7 Support</p>
+<p>Custom Solutions</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+<div class="container">
+<h2 class="section-title">Meet Our Team</h2>
+
+<div class="grid">
+
+<div class="card">
+<img class="team-img"
+src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>John Smith</h3>
+<p>CEO & Founder</p>
+</div>
+
+<div class="card">
+<img class="team-img"
+src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Emma Wilson</h3>
+<p>Lead Developer</p>
+</div>
+
+<div class="card">
+<img class="team-img"
+src="https://randomuser.me/api/portraits/men/55.jpg">
+<h3>Michael Lee</h3>
+<p>UI/UX Designer</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<div class="container">
+<h2 class="section-title">Testimonials</h2>
+
+<div class="grid">
+
+<div class="card">
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+"TechNova transformed our business operations and improved productivity."
+</p>
+<h3>- Sarah Johnson</h3>
+</div>
+
+<div class="card">
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+"Outstanding support team and innovative solutions."
+</p>
+<h3>- David Lee</h3>
+</div>
+
+<div class="card">
+<p>
+⭐⭐⭐⭐⭐ <br><br>
+"Professional service with excellent results."
+</p>
+<h3>- Emily Carter</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h3>TechNova</h3>
+<p>Building the Future Through Technology</p>
+<br>
+
+<a href="#">LinkedIn</a>
+<a href="#">Twitter</a>
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+
+<br><br>
+
+<p>© 2026 TechNova. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
